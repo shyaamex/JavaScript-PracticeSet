@@ -81,4 +81,76 @@
             return val%2===0;
         })
     console.log(new_arr);
+### 6. Write a JavaScript program to calculate the factorial of a given number. 
+    let num = Number(prompt("Enter a number : "));
+    
+    
+    function fact(num){
+        if (num==0 || num==1){
+            return 1;
+        }else{
+            return num*=fact(num-1);
+        }
+    }
+    
+    console.log(fact(num));
+### 7. Write a JavaScript function to check if a given number is prime. 
+    const num = Number(prompt("Enter a Number : "));
+    let flag =0
+    if (num==0 || num==1){
+        console.log("Neither Prime nor a composite Number ");
+        flag=1;
+    }else if(num>1){
+        for(i=2;i<num;i++){
+            if(num%i===0){
+                console.log("A composite number");
+                flag=1;
+                break;
+            }
+        }
+        
+    }
+    if(flag===0){
+        console.log("It is a prime nummber")
+    }
+### 8. Write a JavaScript program to find the largest element in a nested array. 
+    const arr =[[12,23,21],[67,23,12],[23,34,233]];  
+    let largest =0;
+    for(let i=0;i<arr.length;i++){
+        for(j=0;j<arr[i].length;j++){
+            if(arr[i][j]>largest){
+                largest=arr[i][j];
+            }
+        }
+    }
+    console.log("The largest element in this nested array is ",largest);
+### 9. Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms. 
+    const m = Number(prompt("Enter a number : "));
+    let a=0;
+    let b=1;
+    
+    for(let i=0;i<m;i++){
+        if(a==0){
+            console.log(a);
+        }
+        console.log(b);
+        c = a+b;
+        a=b;
+        b=c;
+    }
+### 10. Write a JavaScript program to convert a string to title case (capitalize the first letter of each word). 
+    function capital_letter(str) 
+    {
+        str = str.split(" ");
+    
+        for (var i = 0, x = str.length; i < x; i++) {
+            str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+        }
+    
+        return str.join(" ");
+    }
+    
+    console.log(capital_letter("shyam pratap singh"));
+
+
 
